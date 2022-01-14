@@ -34,12 +34,12 @@
 
 }
 
-#celda_roja {
+.celda_roja {
     height: 10%;
     padding-top: 10%;
 
 }
-#boton{
+.boton{
     background-color:#9f1b1f;
     border-collapse: collapse;
     border-style: hidden;
