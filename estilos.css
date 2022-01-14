@@ -111,16 +111,13 @@
     border-style:hidden;
     align-items: baseline;
 }
-.barra_arriba p{
-
-
-}
 
 /*div que contiene la fecha*/
 .fecha{
     text-align: center;
     vertical-align: bottom;
     width: 70%;
+    margin-top: 5%;
 }
 
 .logo{
