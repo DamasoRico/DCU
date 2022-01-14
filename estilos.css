@@ -104,20 +104,29 @@
     text-decoration: none;
 }
 
-#date.barra_arriba{
-
-
-}
 
 /*celda de arriba a la derecha aqui va la fecha, el logo de la upv y los botones de navegacion*/
 .barra_arriba{
     background-color:#ffffff;
     border-style:hidden;
-    text-align:left;    
+    align-items: baseline;
 }
+.barra_arriba p{
+
+
+}
+
+/*div que contiene la fecha*/
 .fecha{
     text-align: center;
-    vertical-align: middle;
+    vertical-align: bottom;
+    width: 70%;
+}
+
+.logo{
+
+    float: right;
+
 }
 
 /*aqui va la informacion del usuario y el boton de cerrar sesion*/
