@@ -1,3 +1,4 @@
+/*le da formato a la tabla que contiene todo*/
 .table_full {
     border-collapse: collapse;
     width: 100%;
@@ -9,12 +10,9 @@
     left: 0;
     right: 0;
     border-spacing:0;
-    /*td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;*/
-    /*    overflow:hidden;padding:10px 5px;word-break:normal;}*/
-    /*th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;*/
-    /*    font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}*/
-}
 
+}
+/*el div que contiene los botones*/
 .botonera{
     height: 50%;
     width: 100%;
@@ -23,26 +21,21 @@
     margin: 0 0 auto auto;
 
 }
-
-.fila_roja{
-    width: 100%;
-
-}
-
+/*le da formao a la fila de arriba de la tabla inicial*/
 .fila_arriba{
     height: 10%;
 
 }
-
+/*basicamente esto son los div que contienen los botones de la derecha*/
 .celda_roja {
     height: 10%;
     padding-top: 10%;
 
 }
+/*los botoncitos de la derecha*/
 .boton{
     background-color:#9f1b1f;
     border-collapse: collapse;
-    border-style: hidden;
     border: 1px solid #CCCCCC;
     border-right-color: #333333;
     border-bottom-color: #333333;
@@ -63,7 +56,7 @@
 
 }
 
-
+/*esta y la de abajo de momento estan vacias, son las celdas blancas que hay  arriba del todo*/
 .celda_blanca{
     background-color:#ffffff;
     border-style:hidden;
@@ -77,6 +70,8 @@
     vertical-align:top;
     width: 10%
 }
+
+/*el cuadrado grande gris que sera el cuerpo principal de  la pagina*/
 .celda_gris{background-color:#d9d9d9;
     border-style:hidden;
     text-align:left;
@@ -84,4 +79,3 @@
     z-index: 20;
     position: relative
 }
-@media screen and (max-width: 767px) {.tg {width: auto !important;}.tg col {width: auto !important;}.tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;}}
