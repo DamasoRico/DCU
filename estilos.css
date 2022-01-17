@@ -123,9 +123,10 @@
 }
 
 .logo{
-
     float: right;
-
+}
+.logoentrada{
+    margin-left: 80px;
 }
 
 /*aqui va la informacion del usuario y el boton de cerrar sesion*/
@@ -144,4 +145,20 @@
     vertical-align:top;
     z-index: 20;
     position: relative
+}
+.celda1{
+    border: 1px solid black;
+    width: 600px;
+    height: 970px;
+}
+.celda2{
+    background-color:#d9d9d9;
+    width: 2000px;
+    border: 1px solid black;
+}
+.campo{
+    margin-top: 10px;
+    margin-left: 200px;
+    height: 30px;
+    width: 200px;
 }
