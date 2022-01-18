@@ -63,6 +63,29 @@
     display: block;
     text-decoration: none;
 }
+.boton-actual{
+    background-color:black;
+    border-collapse: collapse;
+    border: 1px solid #CCCCCC;
+    border-right-color: #333333;
+    border-bottom-color: #333333;
+    top: 0;
+    left: 0;
+    color: white;
+    alignment: center;
+    padding: 30px;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+    margin: 0;
+    display: block;
+    text-decoration: none;
+
+
+
+}
+
+
 
 /*clase para los botones de arriba de la pagina*/
 .boton_superior{
