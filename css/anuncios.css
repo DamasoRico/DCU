@@ -5,6 +5,13 @@
     vertical-align: top;
 }
 
+.lineac{
+    height: 20px;
+    width: 100px;
+    border: 1px solid black;
+    vertical-align: top;
+}
+
 .h1{
     margin-top: 30px;
     margin-left: 10px;
@@ -23,4 +30,8 @@
 
 .a{
     margin-top: 40px;
+}
+
+.tab{
+    height: 100px;
 }
