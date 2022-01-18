@@ -10,8 +10,8 @@
     left: 0;
     right: 0;
     border-spacing:0;
-
 }
+
 /*el div que contiene los botones de la izquierda*/
 .botonera {
     height: 50%;
@@ -19,6 +19,7 @@
     border:hidden;
     margin: 0 0 auto auto;
 }
+
 .botonera a:hover{
     background-color: black;
     color: white;
@@ -26,21 +27,23 @@
 
 .botonerav{
     width: 100%;
-
     border:hidden;
     margin: 0;
     float: left;
     vertical-align: bottom;
     padding: 0;
 }
+
 .botonerav a:hover{
     background-color:black;
     color: white;
 }
+
 /*le da formao a la fila de arriba de la tabla inicial*/
 .fila_arriba{
     height: 10%;
 }
+
 /*los botoncitos de la derecha*/
 .boton {
     background-color:#9f1b1f;
@@ -60,7 +63,6 @@
     display: block;
     text-decoration: none;
 }
-
 
 /*clase para los botones de arriba de la pagina*/
 .boton_superior{
@@ -83,6 +85,7 @@
     float: left;
     text-decoration: none;
 }
+
 .boton_superior_actual{
     background-color:black;
     color: white;
@@ -104,7 +107,6 @@
     text-decoration: none;
 }
 
-
 /*celda de arriba a la derecha aqui va la fecha, el logo de la upv y los botones de navegacion*/
 .barra_arriba{
     background-color:#ffffff;
@@ -125,13 +127,16 @@
 .logo{
     float: right;
 }
+
 .logoentrada{
     margin-left: 80px;
 }
+
 .foto{
     float: right;
     margin-right: 50px;
 }
+
 /*aqui va la informacion del usuario y el boton de cerrar sesion*/
 .user_info{
     background-color:#ffffff;
@@ -149,16 +154,19 @@
     z-index: 20;
     position: relative
 }
+
 .celda1{
     border: 1px solid black;
     width: 600px;
     height: 970px;
 }
+
 .celda2{
     background-color:#d9d9d9;
     width: 2000px;
     border: 1px solid black;
 }
+
 .campo{
     margin-top: 10px;
     margin-left: 200px;
