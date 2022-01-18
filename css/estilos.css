@@ -165,3 +165,17 @@
     height: 30px;
     width: 200px;
 }
+
+.movil{
+    display: none;
+}
+
+/* responsive */
+@media screen and (max-width: 677px) {
+    .ordenador {
+        display: none !important;
+    }
+    .movil {
+        display: block;
+    }
+}
