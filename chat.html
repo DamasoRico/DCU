@@ -1,86 +1,11 @@
-<!--esta es la que estaba haciendo para que sirviera de estructura para el resto de cosas-->
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="icon" href="images/UPV_logo.png" type="image/png">
-
-    <link rel="stylesheet" href="estilos.css">
-
-    <meta charset="UTF-8">
-    <title>DCU</title>
-</head>
-<body>
-
-<!-- esta tabla divide la pantalla en 4 para que sea mas facil trabajar -->
-<div class="tg-wrap"><table class="table_full">
-    <thead>
-    <tr class="fila_arriba">
-
-        <!--   celda de arriba a la izquierda, aqui ira la informacion del usuario  y el boton de cerrar sesion -->
-        <td class="user_info" >
-            <p>patata</p>
-        </td>
-
-
-        <!-- celda de arriba a la derecha aqui va la fecha, el logo de la upv y los botones de navegacion-->
-        <td class="barra_arriba">
-
-            <img class="logo" src="images/marca_UPV_principal_negro.png" alt="upv logo">
-            <p class="fecha" id="date"></p>
-            <script src="fecha.js"></script>
-
-            <nav class="botonerav">
-                <a href="anuncios.html" class="boton_superior">
-                    Anuncios
-                </a>
-                <a href="evaluacion.html" class="boton_superior">
-                    Evaluacion
-                </a>
-                <a href="correo.html" class="boton_superior">
-                    Correo
-                </a>
-                <a href="recursos.html" class="boton_superior">
-                    Recursos
-                </a>
-                <a href="chat.html" class="boton_superior_actual">
-                    Chat
-                </a>
-                <a href="notas.html" class="boton_superior">
-                    Notas
-                </a>
-                <a href="grupos.html" class="boton_superior">
-                    Grupos
-                </a>
-            </nav>
-
-        </td>
-    </tr>
-    <tr>
-
-        <!--    esto es la botonera de la izquierda, hay que cambiarlo porque los botones dependen de las asignaturas del alumno,
- esto era solo para mirar como hacerlo mas o menos    -->
-        <td style="vertical-align: top">
-            <div class="botonera">
-                    <a href="anuncios.html" class="boton">
-                        IAP
-                    </a>
-                    <a href="anuncios.html" class="boton">
-                        IAP
-                    </a>
-                    <a href="anuncios.html" class="boton">
-                        IAP
-                    </a>
-                    <a href="anuncios.html" class="boton">
-                        IAP
-                    </a>
-            </div>
-        </td>
-
-        <!--   Esto es el cuadrado gris que tiene el cuerpo principal de la pagina, si no me equivoco lo de dentro se tendra que hacer practicamente todo con ajax     -->
-        <td class="celda_gris">zxzcas</td>
-    </tr>
-    </thead>
-</table></div>
-</body>
-</html>
+<script type="module"  src="js/MainPageLoader.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/ContentLoader.js"></script>
+<link rel="icon" href="images/UPV_logo.png" type="image/png">
+<script>
+    $(document).ready(function (){
+        loadContent("chatContent.html")
+        setDate();
+        SetMenuBar("chat");
+    });
+</script>
