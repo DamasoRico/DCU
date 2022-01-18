@@ -128,14 +128,17 @@
 .logoentrada{
     margin-left: 80px;
 }
-
+.foto{
+    float: right;
+    margin-right: 50px;
+}
 /*aqui va la informacion del usuario y el boton de cerrar sesion*/
 .user_info{
     background-color:#ffffff;
     border-style:hidden;
     text-align:left;
     vertical-align:top;
-    width: 10%
+    width: 10%;
 }
 
 /*el cuadrado grande gris que sera el cuerpo principal de  la pagina*/
