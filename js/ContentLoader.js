@@ -27,3 +27,11 @@ function SetMenuBar(id)
     menuBar.removeClass();
     menuBar.addClass("boton_superior_actual");
 }
+function change_style(clicked_id)
+{
+    for (let i=1;i<5;i++){
+        document.getElementById("boton"+i).classList.remove("boton_actual")
+        document.getElementById(clicked_id).classList.add("boton")
+    }
+    document.getElementById(clicked_id).classList.add("boton_actual")
+}

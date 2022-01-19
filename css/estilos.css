@@ -63,7 +63,7 @@
     display: block;
     text-decoration: none;
 }
-.boton-actual{
+.boton_actual{
     background-color:black;
     border-collapse: collapse;
     border: 1px solid #CCCCCC;
