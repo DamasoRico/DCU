@@ -1,7 +1,6 @@
 .linea{
     height: 250px;
     width: 1000px;
-    border: 1px solid black;
     vertical-align: top;
 }
 
@@ -13,9 +12,16 @@
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+
 .lineag{
     height: 250px;
     width: 500px;
+    text-align: center;
+}
+
+.lineam{
+    width: 500px;
+    text-align: left;
     border: 1px solid black;
 }
 
@@ -42,6 +48,11 @@
 .tab{
     height: 100px;
     margin-left: 50px;
+}
+
+.tabc{
+    height: 100px;
+    margin-left: 50px;
     background-color: white;
 }
 
@@ -61,6 +72,7 @@
     margin-left: 50px;
     margin-bottom: 20px;
 }
+
 .botonf{
     background-color: white;
     border: 1px solid #CCCCCC;
