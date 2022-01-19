@@ -86,8 +86,35 @@
             </thead>
         </table>
     </div>
-    <div class="movil">
 
+    <div class="movil">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleDropDown()">☰</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a data-id="anuncios" onclick="change_content($(this).attr('data-id'))">
+                    Anuncios
+                </a>
+                <a data-id="evaluacion" onclick="change_content($(this).attr('data-id'))">
+                    Evaluacion
+                </a>
+                <a data-id="correo" onclick="change_content($(this).attr('data-id'))">
+                    Correo
+                </a>
+                <a data-id="recursos" onclick="change_content($(this).attr('data-id'))">
+                    Recursos
+                </a>
+                <a data-id="chat" onclick="change_content($(this).attr('data-id'))">
+                    Chat
+                </a>
+                <a data-id="notas" onclick="change_content($(this).attr('data-id'))">
+                    Notas
+                </a>
+                <a data-id="grupos" onclick="change_content($(this).attr('data-id'))">
+                    Grupos
+                </a>
+            </div>
+        </div>
+        <div id="contentPhone" style="margin-top: 10px"></div>
     </div>
 </body>
 </html>
