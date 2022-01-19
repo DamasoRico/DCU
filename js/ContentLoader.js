@@ -98,8 +98,6 @@ function changePhoneContent(actual)
             dropdown.children[i].classList.add("selected");
         }
     }
-    // CLOSE DROPDOWN
-    toggleDropDown();
 
 }
 

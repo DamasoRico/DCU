@@ -149,7 +149,7 @@
     text-align: center;
     vertical-align: bottom;
     width: 70%;
-    margin-top: 5%;
+    margin-top: 15px;
     color: #b3b3b3;
     font-size: 20px;
 }
@@ -163,8 +163,7 @@
 }
 
 .foto{
-    float: right;
-    margin-right: 50px;
+    margin-right: 5px;
 }
 
 /*aqui va la informacion del usuario y el boton de cerrar sesion*/
@@ -251,6 +250,7 @@
 }
 
 .dropdown-content a {
+    cursor: context-menu;
     text-align: center;
     width: 100%;
     color: black;
@@ -264,3 +264,11 @@
 .dropdown .selected {background-color: #ddd;}
 
 .show {display: block;}
+
+#subjects
+{
+    width: 20%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}

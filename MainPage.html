@@ -17,16 +17,15 @@
                  <tr class="fila_arriba">
                 <!--   celda de arriba a la izquierda, aqui ira la informacion del usuario  y el boton de cerrar sesion -->
                     <td class="user_info" >
-                        <div>
+                        <div style="display:flex">
                             <p>
                                 <img class="foto" alt="patata" src="images/blank-profile-picture-973460_960_720.png" >
                             </p>
-                        </div>
-                        <div>
-                            <p>UserName@inf.upv.es</p>
-                        </div>
-                        <div>
-                            <a href="Entrada.html"><input type="button" value="<--- Salir" class="salir"></a>
+                            <div>
+                                <p>UserName@inf.upv.es</p>
+                                <a href="Entrada.html">Cerrar sesion</a>
+                            </div>
+
                         </div>
                     </td>
 
@@ -90,7 +89,7 @@
     <div class="movil">
         <div class="dropdown">
             <button class="dropbtn" onclick="toggleDropDown()">☰</button>
-            <div id="myDropdown" class="dropdown-content show">
+            <div id="myDropdown" class="dropdown-content">
                 <a data-id="anuncios" onclick="change_content($(this).attr('data-id'))">
                     Anuncios
                 </a>
@@ -115,7 +114,7 @@
             </div>
         </div>
         <div>
-            <select id="subjects">
+            <select id="subjects" style="margin-top: 10px">
                 <option value="IAP">IAP</option>
                 <option value="IAP">IAP</option>
                 <option value="IAP">IAP</option>
