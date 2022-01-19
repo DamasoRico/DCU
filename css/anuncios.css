@@ -6,10 +6,9 @@
 }
 
 .lineac{
-    height: 20px;
+    height: 30px;
     width: 100px;
     border: 1px solid black;
-    vertical-align: top;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -42,6 +41,8 @@
 
 .tab{
     height: 100px;
+    margin-left: 50px;
+    background-color: white;
 }
 
 .fotog{
@@ -49,4 +50,24 @@
     height: 140px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.botonc{
+    background-color: white;
+    border: 1px solid #CCCCCC;
+    border-right-color: #333333;
+    border-bottom-color: #333333;
+    padding: 10px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+.botonf{
+    background-color: white;
+    border: 1px solid #CCCCCC;
+    border-right-color: #333333;
+    border-bottom-color: #333333;
+    padding: 10px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    margin-top: 30px;
 }
