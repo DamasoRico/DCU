@@ -68,7 +68,7 @@ function change_content(actual)
 
 function swapMailSubjects(actual){
     var botonera= $("#botonera");
-    if (actual == "correo" )botonera.css("display","none")
+    if (actual == "correo" || actual == "chat")botonera.css("display","none")
     else{
         botonera.css("display","block")
     }
@@ -110,24 +110,19 @@ function toggleDropDown()
     // DROPDOWN CLOSED RETURN;
     if (!dropDown.classList.contains("show")) {
         $("#contentPhone").css("margin-top", "10px");
+        $("#subjects").css("margin-top", "10px")
         return;
     }
 
-    // MOVE CONTENT DOWN
+    // MOVE CONTENT DOWN (ONLY IF DROPDOWN IS OPENED)
     let height = dropDown.offsetHeight + 10;
-    $("#contentPhone").css("margin-top", height + "px");
+    $("#subjects").css("margin-top", height + "px")
 
 }
 
 function changeURL(actual)
 {
-    window.history.pushState("", "", '/DCU/' + actual);
-    debugger;
-    this.window.onbeforeunload = (event) =>  beforeReload();
-}
-
-function beforeReload()
-{
-    debugger;
-    return "WTF MA NIGGA"
+    window.history.pushState(null, null, '/DCU/' + actual);
+    window.onpopstate = function(e){ e.preventDefault(); };
+    window.onbeforeunload = function(){ return "Dude, are you sure you want to leave? Think of the kittens!"; };
 }
