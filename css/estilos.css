@@ -130,6 +130,16 @@
     text-decoration: none;
 }
 
+.salir{
+    background-color:black;
+    color: white;
+    border: 1px solid #CCCCCC;
+    border-right-color: #333333;
+    border-bottom-color: #333333;
+    padding: 10px ;
+
+}
+
 /*celda de arriba a la derecha aqui va la fecha, el logo de la upv y los botones de navegacion*/
 .barra_arriba{
     background-color:#ffffff;

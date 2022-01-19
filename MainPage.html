@@ -26,7 +26,7 @@
                             <p>UserName@inf.upv.es</p>
                         </div>
                         <div>
-                            <a href="Entrada.html"><input type="button" value="Salir"></a>
+                            <a href="Entrada.html"><input type="button" value="<--- Salir" class="salir"></a>
                         </div>
                     </td>
 
@@ -36,25 +36,25 @@
                         <p class="fecha" id="date"></p>
                         <script src="js/fecha.js"></script>
                         <nav class="botonerav">
-                            <a id="anuncios" href="anuncios.html" class="boton_superior">
+                            <a id="anuncios"  class="boton_superior" onclick="change_content(this.id)">
                                 Anuncios
                             </a>
-                            <a id="evaluacion" href="evaluacion.html" class="boton_superior">
+                            <a id="evaluacion"  class="boton_superior" onclick="change_content(this.id)">
                                 Evaluacion
                             </a>
-                            <a id="correo" href="correo.html" class="boton_superior">
+                            <a id="correo"  class="boton_superior" onclick="change_content(this.id)">
                                 Correo
                             </a>
-                            <a id="recursos" href="recursos.html" class="boton_superior">
+                            <a id="recursos"  class="boton_superior" onclick="change_content(this.id)">
                                 Recursos
                             </a>
-                            <a id="chat" href="chat.html" class="boton_superior">
+                            <a id="chat"  class="boton_superior" onclick="change_content(this.id)">
                                 Chat
                             </a>
-                            <a id="notas" href="notas.html" class="boton_superior">
+                            <a id="notas"  class="boton_superior" onclick="change_content(this.id)">
                                 Notas
                             </a>
-                            <a id="grupos" href="grupos.html" class="boton_superior">
+                            <a id="grupos"  class="boton_superior" onclick="change_content(this.id)">
                                 Grupos
                             </a>
                         </nav>
@@ -64,7 +64,7 @@
                     <!--    esto es la botonera de la izquierda, hay que cambiarlo porque los botones dependen de las asignaturas del alumno,
          esto era solo para mirar como hacerlo mas o menos    -->
                     <td style="vertical-align: top">
-                        <div class="botonera">
+                        <div class="botonera" id="botonera">
                             <a id="boton1" class="boton" onclick="change_style(this.id)">
                                 IAP
                             </a>
