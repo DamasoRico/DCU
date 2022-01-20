@@ -13,6 +13,16 @@
     text-overflow: ellipsis;
 }
 
+.linean{
+    height: 30px;
+    width: 400px;
+    border: 1px solid black;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
 .lineag{
     height: 250px;
     width: 500px;
@@ -55,6 +65,15 @@
     margin-left: 50px;
     background-color: white;
 }
+
+.tabn{
+    height: 100px;
+    margin-left: 50px;
+    background-color: white;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
 .tabch{
     height: 100px;
     margin-left: 70px;
