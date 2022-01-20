@@ -280,3 +280,13 @@
     margin-left: 350px;
     margin-top: 20px;
 }
+
+.botons{
+    background-color: white;
+    border: 1px solid #CCCCCC;
+    border-right-color: #333333;
+    border-bottom-color: #333333;
+    padding: 10px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
