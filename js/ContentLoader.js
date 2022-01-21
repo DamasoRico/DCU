@@ -155,12 +155,14 @@ function getAndSetUserInfo()
             for (let i = 0; i < response.asignaturas.length; i++)
             {
                 if (i==0){
-                    subjects += "<a data-id='" + response.asignaturas[i].acronimo +"' class='boton_actual' onclick='change_subject($(this).attr(\"data-id\"))'>" + response.asignaturas[i].acronimo + "</a>";
+                    subjects += "<a data-id='" + response.asignaturas[i].acronimo +"' class='boton_actual' onclick='change_subject($(this).attr(\"data-id\"))'>" +
+                        response.asignaturas[i].acronimo + "</a>";
                     subjectsPhone += "<option value='"+ response.asignaturas[i].acronimo +"'>" + response.asignaturas[i].acronimo + "</option>"
                     userSubjectsInfo+="<p>"+ response.asignaturas[i].acronimo +"</p>"
                 }
                 else {
-                    subjects += "<a data-id='" + response.asignaturas[i].acronimo + "' class='boton' onclick='change_subject($(this).attr(\"data-id\"))'>" + response.asignaturas[i].acronimo + "</a>";
+                    subjects += "<a data-id='" + response.asignaturas[i].acronimo + "' class='boton' onclick='change_subject($(this).attr(\"data-id\"))'>" +
+                        response.asignaturas[i].acronimo + "</a>";
                     subjectsPhone += "<option value='" + response.asignaturas[i].acronimo + "'>" + response.asignaturas[i].acronimo + "</option>"
                     userSubjectsInfo += "<p>" + response.asignaturas[i].acronimo + "</p>"
                 }
@@ -177,7 +179,6 @@ function getAndSetUserInfo()
             $("#correoMobile").html(removeAccents(correo.toLowerCase()));
             $("#subjects").html(subjectsPhone);
             $("#botonera").html(subjects);
-            $("#UserSubjectInfo").html(userSubjectsInfo);
         }
     })
 }
