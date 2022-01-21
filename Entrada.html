@@ -24,6 +24,7 @@
                     </div>
                         <input onclick="return validate()" type="submit" value="Entrar" class="botone">
                 </form>
+                <div><p id="error" class="hidden">Usuario o contraseña incorrectos</p></div>
             </td>
         </tr>
     </table>
@@ -49,7 +50,13 @@
 
                 if (found) {
                     localStorage.setItem('UserId', userId);
-                    window.location = "http://localhost/DCU/Main.html";
+                    window.location = "http://localhost/untitled/Main.html";
+                }
+                else {
+                    document.getElementById("error").className="visible"
+                    setTimeout(function (){error.className="hidden"},1000)
+
+
                 }
             }
         })

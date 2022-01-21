@@ -37,7 +37,7 @@ html
     margin: 0;
     float: left;
     vertical-align: bottom;
-    padding: 0;
+    padding: 0.7%;
 }
 
 .botonerav a:hover{
@@ -295,4 +295,27 @@ html
     padding: 10px;
     margin-left: 20px;
     margin-bottom: 20px;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 2s, opacity 2s linear;
+    color: red;
+    text-align: center;
+    width: 50%;
+}
+.visible{
+    visibility: visible;
+    opacity: 1;
+    color: red;
+    text-align: center;
+    width: 50%;
+}
+#correoinfo{
+margin-top: 0;
+height: 5%;
+}
+#name{
+    height: 15%;
 }
