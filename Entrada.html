@@ -3,6 +3,7 @@
 <head>
     <link rel="icon" href="images/UPV_logo.png" type="image/png">
     <link rel="stylesheet" href="css/estilos.css">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <script src="js/jquery.min.js"></script>
     <meta charset="UTF-8">
     <title>Entrada</title>
@@ -28,7 +29,21 @@
             </td>
         </tr>
     </table>
-    <div class="movil"></div>
+    <div class="movil">
+        <form method="post" name="Login">
+            <div>
+                <h1 class="h1entrada">Gestión de Grupos en actos de Evaluación de PoliformaT</h1>
+                <img src="images/marca_UPV_principal_negro.png" alt="upv logo">
+            </div>
+            <div style="margin-left: 30px; ">
+                <input  type="text" placeholder="Usuario">
+            <div style="margin-top: 10px; ">
+                <input type="password"  placeholder="Contraseña">
+            </div>
+                <input style="margin-left: 120px !important;" onclick="return validate()" type="submit" value="Entrar" class="botone">
+            </div>
+        </form>
+    </div>
 </body>
 </html>
 <script>
