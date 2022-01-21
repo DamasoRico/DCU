@@ -1,3 +1,9 @@
+html
+{
+    cursor: context-menu;
+    overflow: hidden;
+}
+
 /*le da formato a la tabla que contiene todo*/
 .table_full{
     border-collapse: collapse;

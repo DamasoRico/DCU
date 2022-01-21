@@ -1,3 +1,5 @@
+const actual = "";
+
 function loadContent(contentFile)
 {
     //ordenador
@@ -42,19 +44,32 @@ function SetMenuBar(id)
     dropdown.children[0].classList.add("selected");
 }
 
-function change_style(actual)
+function change_subject(dataId)
 {
-    for (let i=1;i<5;i++){
-        document.getElementById("boton"+i).classList.remove("boton_actual")
-
+    debugger;
+    let botonera = document.getElementById("botonera");
+    for(let i =  0; i < botonera.children.length ; i++) {
+        // UNSELECT ALL
+        if (botonera.children[i].classList.contains("boton_actual")) {
+            botonera.children[i].classList.remove("boton_actual");
+            botonera.children[i].classList.add("boton");
+        }
+        // SELECT ACTIVE MENU BUTTON
+        if (botonera.children[i].attributes["data-id"].nodeValue === dataId) {
+            botonera.children[i].classList.add("boton_actual");
+            botonera.children[i].classList.remove("boton");
+        }
     }
-    document.getElementById(actual).classList.add("boton_actual")
+    change_content(localStorage.getItem("mofes"));
 }
 
 function change_content(actual)
 {
+    localStorage.setItem("mofes", actual)
     // loads new content
     loadContent(actual+"Content.html")
+
+    getAjaxInfo(actual);
 
     // changes pc html, css part
     changePCContent(actual);
@@ -124,3 +139,31 @@ function changeURL(actual)
     window.onpopstate = function(e){ e.preventDefault(); };
     window.onbeforeunload = function(){ return "Dude, are you sure you want to leave? Think of the kittens!"; };
 }
+
+function getAjaxInfo(actual)
+{
+}
+
+function loadSubjectsWAjax()
+{
+    let userId = localStorage.getItem("UserId");
+    $.ajax({
+        type: "GET",
+        url:  "http://pedvalar.webs.upv.es/iap/rest/centroeducativo/alumnos/" + userId,
+        success : function (response) {
+            response = JSON.parse(response);
+
+            let subjects = "";let subjectsPhone = "";
+            let dataId  = "$(this).attr('data-id')";
+            for (let i = 0; i < response.asignaturas.length; i++)
+            {
+                subjects += "<a data-id='" + response.asignaturas[i].acronimo + "' class='boton' onclick='change_subject($(this).attr(\"data-id\"))'>" + response.asignaturas[i].acronimo + "</a>";
+                subjectsPhone += "<option value='"+ response.asignaturas[i].acronimo +"'>" + response.asignaturas[i].acronimo + "</option>"
+            }
+
+            $("#subjects").html(subjectsPhone);
+            $("#botonera").html(subjects);
+        }       
+    })
+}
+

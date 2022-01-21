@@ -3,6 +3,7 @@
 <head>
     <link rel="icon" href="images/UPV_logo.png" type="image/png">
     <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/jquery.min.js"></script>
     <meta charset="UTF-8">
     <title>Entrada</title>
 </head>
@@ -14,17 +15,44 @@
                 <img src="images/marca_UPV_principal_negro.png" alt="upv logo">
             </td>
             <td class="celda2">
-                <form action="#" target="" method="get" name="Login">
+                <form method="post" name="Login">
                     <div>
-                        <input type="text" class="campo" placeholder="Usuario">
+                        <input id="userId" type="text" class="campo" placeholder="Usuario">
                     </div>
                     <div>
                         <input type="password" class="campo"  placeholder="Contraseña">
                     </div>
-                    <a href="Main.html"><input type="button" value="Entrar" class="botone"></a>
+                        <input onclick="return validate()" type="submit" value="Entrar" class="botone">
                 </form>
             </td>
         </tr>
     </table>
 </body>
 </html>
+<script>
+    function validate() {
+        let userId = document.getElementById("userId").value;
+        let found = false;
+        $.ajax({
+            type: "GET",
+            async: false,
+            url: "http://pedvalar.webs.upv.es/iap/rest/centroeducativo/alumnos",
+            success: function (response) {
+                response = JSON.parse(response);
+
+                for (let i = 0; i < response.length; i++) {
+                    if (userId === response[i].dni) {
+                        found = true;
+                        break;
+                    }
+                }
+
+                if (found) {
+                    localStorage.setItem('UserId', userId);
+                    window.location = "http://localhost/DCU/Main.html";
+                }
+            }
+        })
+        return false;
+    }
+</script>
