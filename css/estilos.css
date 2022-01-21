@@ -37,7 +37,6 @@ html
     margin: 0;
     float: left;
     vertical-align: bottom;
-    padding: 0.7%;
 }
 
 .botonerav a:hover{
@@ -175,6 +174,10 @@ html
     width: 10%;
 }
 
+#name{
+    position: absolute;
+}
+
 /*el cuadrado grande gris que sera el cuerpo principal de  la pagina*/
 .celda_gris{
     background-color:#d9d9d9;
@@ -305,6 +308,7 @@ html
     text-align: center;
     width: 50%;
 }
+
 .visible{
     visibility: visible;
     opacity: 1;
@@ -312,15 +316,18 @@ html
     text-align: center;
     width: 50%;
 }
+
 #correoinfo{
-margin-top: 0;
+margin-top: 30px;
 height: 5%;
 }
-#name{
-    height: 15%;
-}
+
 #contentPhone{
     margin-top: 10px;
     max-width: 100%;
     overflow-x: hidden;
+}
+
+#UserButtonInfo{
+    margin: 0 auto;
 }

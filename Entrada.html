@@ -8,7 +8,7 @@
     <title>Entrada</title>
 </head>
 <body>
-    <table >
+    <table class="ordenador">
         <tr>
             <td class="celda1">
                 <h1 class="h1entrada">Gestión de Grupos en actos de Evaluación de PoliformaT</h1>
@@ -28,6 +28,7 @@
             </td>
         </tr>
     </table>
+    <div class="movil"></div>
 </body>
 </html>
 <script>
@@ -50,12 +51,12 @@
 
                 if (found) {
                     localStorage.setItem('UserId', userId);
-                    window.location = "http://localhost/untitled/Main.html";
+                    let location = window.location.href;
+                    window.location.href = location.replace("Entrada.html", "Main.html");
                 }
                 else {
                     document.getElementById("error").className="visible"
                     setTimeout(function (){error.className="hidden"},1000)
-
 
                 }
             }

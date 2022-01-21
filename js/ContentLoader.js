@@ -123,14 +123,15 @@ function toggleDropDown()
     // DROPDOWN CLOSED RETURN;
     if (!dropDown.classList.contains("show")) {
         $("#contentPhone").css("margin-top", "10px");
-        $("#subjects").css("margin-top", "10px")
+        $("#subjects").css("margin-top", "10px");
+        $("#UserButtonInfo").css("margin-top", "10px");
         return;
     }
 
     // MOVE CONTENT DOWN (ONLY IF DROPDOWN IS OPENED)
     let height = dropDown.offsetHeight + 10;
-    $("#subjects").css("margin-top", height + "px")
-
+    $("#subjects").css("margin-top", height + "px");
+    $("#UserButtonInfo").css("margin-top", height + "px");
 }
 
 function changeURL(actual)
@@ -153,10 +154,16 @@ function getAndSetUserInfo()
             let dataId  = "$(this).attr('data-id')";
             for (let i = 0; i < response.asignaturas.length; i++)
             {
-                subjects += "<a data-id='" + response.asignaturas[i].acronimo + "' class='boton' onclick='change_subject($(this).attr(\"data-id\"))'>" + response.asignaturas[i].acronimo + "</a>";
+                subjects += "<a data-id='" + response.asignaturas[i].acronimo +
+                    "' class='boton' onclick='change_subject($(this).attr(\"data-id\"))'>" + response.asignaturas[i].acronimo + "</a>";
                 subjectsPhone += "<option value='"+ response.asignaturas[i].acronimo +"'>" + response.asignaturas[i].acronimo + "</option>"
             }
-            var correo=response.nombre.substr(0,2)+response.apellidos.substr(0,2)+response.apellidos.substr(response.apellidos.indexOf(" ")+1,2)+"@etsinf.upv.es"
+
+            var correo=response.nombre.substr(0,2)+
+                response.apellidos.substr(0,2)+
+                response.apellidos.substr(response.apellidos.indexOf(" ")+1,2)
+                +"@etsinf.upv.es"
+
             $("#name").html(response.nombre + " "  +  response.apellidos)
             $("#correoinfo").html(removeAccents(correo.toLowerCase()))
             $("#subjects").html(subjectsPhone);
