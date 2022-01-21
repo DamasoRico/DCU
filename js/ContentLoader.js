@@ -150,7 +150,7 @@ function getAndSetUserInfo()
         success : function (response) {
             response = JSON.parse(response);
 
-            let subjects = "";let subjectsPhone = "";let userSubjectsInfo="";
+            let subjects = "";let subjectsPhone = "";let userSubjectsInfo="<p>"+ "Asignaturas:" +"</p>";
             let dataId  = "$(this).attr('data-id')";
             for (let i = 0; i < response.asignaturas.length; i++)
             {
