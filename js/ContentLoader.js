@@ -154,10 +154,16 @@ function getAndSetUserInfo()
             let dataId  = "$(this).attr('data-id')";
             for (let i = 0; i < response.asignaturas.length; i++)
             {
-                subjects += "<a data-id='" + response.asignaturas[i].acronimo +
-                    "' class='boton' onclick='change_subject($(this).attr(\"data-id\"))'>" + response.asignaturas[i].acronimo + "</a>";
-                subjectsPhone += "<option value='"+ response.asignaturas[i].acronimo +"'>" + response.asignaturas[i].acronimo + "</option>"
-                userSubjectsInfo+="<p>"+ response.asignaturas[i].acronimo +"</p>"
+                if (i==0){
+                    subjects += "<a data-id='" + response.asignaturas[i].acronimo +"' class='boton_actual' onclick='change_subject($(this).attr(\"data-id\"))'>" + response.asignaturas[i].acronimo + "</a>";
+                    subjectsPhone += "<option value='"+ response.asignaturas[i].acronimo +"'>" + response.asignaturas[i].acronimo + "</option>"
+                    userSubjectsInfo+="<p>"+ response.asignaturas[i].acronimo +"</p>"
+                }
+                else {
+                    subjects += "<a data-id='" + response.asignaturas[i].acronimo + "' class='boton' onclick='change_subject($(this).attr(\"data-id\"))'>" + response.asignaturas[i].acronimo + "</a>";
+                    subjectsPhone += "<option value='" + response.asignaturas[i].acronimo + "'>" + response.asignaturas[i].acronimo + "</option>"
+                    userSubjectsInfo += "<p>" + response.asignaturas[i].acronimo + "</p>"
+                }
             }
 
             var correo=response.nombre.substr(0,2)+
