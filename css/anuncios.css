@@ -5,13 +5,9 @@
 }
 
 .lineac{
-    height: 30px;
-    width: 100px;
-    border: 1px solid black;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+
 }
+
 
 .linean{
     height: 30px;
@@ -164,4 +160,51 @@
 .g-block-2 {
     width: 49%;
     float: right;
+}
+.correoA{
+
+    overflow: hidden;
+    width: 99%;
+}
+.correoB{
+    float: left;
+    width: 40%;
+    margin-left: 10px;
+    margin-right: 20px;
+
+}
+#contentPhone{
+    height: 100%;
+
+}
+
+.correo_entero{
+    background-color: #d9d9d9;
+    width: 100%;
+    height: 9%;
+    border: 1px solid black;
+    white-space: nowrap;
+}
+.correos{
+    height: 100%;
+    width: 99%;
+    border-style: hidden;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    alignment: center;
+    margin-left: 0.5%;
+
+}
+
+.lineac{
+    height: 30px;
+    width: 100px;
+    border: 1px solid black;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+
+
 }
