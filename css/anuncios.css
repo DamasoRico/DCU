@@ -189,12 +189,10 @@
     height: 100%;
     width: 99%;
     border-style: hidden;
-
     white-space: nowrap;
     text-overflow: ellipsis;
     alignment: center;
     margin-left: 0.5%;
-
 }
 
 .lineac{
@@ -204,7 +202,4 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-
-
-
 }

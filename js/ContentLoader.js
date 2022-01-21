@@ -150,13 +150,14 @@ function getAndSetUserInfo()
         success : function (response) {
             response = JSON.parse(response);
 
-            let subjects = "";let subjectsPhone = "";
+            let subjects = "";let subjectsPhone = "";let userSubjectsInfo="";
             let dataId  = "$(this).attr('data-id')";
             for (let i = 0; i < response.asignaturas.length; i++)
             {
                 subjects += "<a data-id='" + response.asignaturas[i].acronimo +
                     "' class='boton' onclick='change_subject($(this).attr(\"data-id\"))'>" + response.asignaturas[i].acronimo + "</a>";
                 subjectsPhone += "<option value='"+ response.asignaturas[i].acronimo +"'>" + response.asignaturas[i].acronimo + "</option>"
+                userSubjectsInfo+="<p>"+ response.asignaturas[i].acronimo +"</p>"
             }
 
             var correo=response.nombre.substr(0,2)+
@@ -164,10 +165,13 @@ function getAndSetUserInfo()
                 response.apellidos.substr(response.apellidos.indexOf(" ")+1,2)
                 +"@etsinf.upv.es"
 
-            $("#name").html(response.nombre + " "  +  response.apellidos)
-            $("#correoinfo").html(removeAccents(correo.toLowerCase()))
+            $("#name").html(response.nombre + " "  +  response.apellidos);
+            $("#nameMobile").html(response.nombre + " "  +  response.apellidos);
+            $("#correoinfo").html(removeAccents(correo.toLowerCase()));
+            $("#correoMobile").html(removeAccents(correo.toLowerCase()));
             $("#subjects").html(subjectsPhone);
             $("#botonera").html(subjects);
+            $("#UserSubjectInfo").html(userSubjectsInfo);
         }
     })
 }
