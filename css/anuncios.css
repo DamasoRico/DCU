@@ -56,8 +56,7 @@
 }
 
 .tab{
-    height: 100px;
-    margin-left: 50px;
+
 }
 
 .tabc{
@@ -80,12 +79,17 @@
     margin-top: 50px;
     background-color: white;
 }
+.div_grupo{
+    text-align: center;
 
+
+}
 .fotog{
     display: block;
     height: 140px;
     margin-left: auto;
     margin-right: auto;
+    float: top;
 }
 
 .botonc{
@@ -120,9 +124,9 @@
 
 .mensaje{
     margin-left: 70px;
-    width: 610px;
     margin-top: 20px;
     padding: 10px;
+    width: 90%;
 }
 
 .radio{
