@@ -5,109 +5,119 @@
     <link rel="stylesheet" href="css/estilos.css">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta charset="UTF-8">
+    <script src="js/ContentLoader.js"></script>
     <title>
         Gestión de Grupos en Actos de Evaluación de PoliformaT
     </title>
 </head>
 <body>
-    <!-- esta tabla divide la pantalla en 4 para que sea mas facil trabajar -->
-    <div class="ordenador tg-wrap">
-        <table class="table_full">
-            <thead>
-                 <tr class="fila_arriba">
-                <!--   celda de arriba a la izquierda, aqui ira la informacion del usuario  y el boton de cerrar sesion -->
-                    <td class="user_info" >
-                        <div style="display:flex">
-                            <p>
-                                <img class="foto" alt="patata" src="images/blank-profile-picture-973460_960_720.png" >
-                            </p>
-                            <div>
-                                <p id="name"></p>
-                                <p id="correoinfo"></p>
-                                <a href="Entrada.html"><input id="closeSession" type="button" value="Cerrar sesion" class="botons"></a>
-                            </div>
+<!-- esta tabla divide la pantalla en 4 para que sea mas facil trabajar -->
+<div class="ordenador tg-wrap">
+    <table class="table_full">
+        <thead>
+        <tr class="fila_arriba">
+            <!--   celda de arriba a la izquierda, aqui ira la informacion del usuario  y el boton de cerrar sesion -->
+            <td class="user_info" >
+                <div style="display:flex">
+                    <p>
+                        <img class="foto" alt="patata" src="images/blank-profile-picture-973460_960_720.png" >
+                    </p>
+                    <div>
+                        <p id="name"></p>
+                        <p id="correoinfo"></p>
+                        <a href="Entrada.html"><input id="closeSession" type="button" value="Cerrar sesion" class="botons"></a>
+                    </div>
 
-                        </div>
-                    </td>
+                </div>
+            </td>
 
-                    <!-- celda de arriba a la derecha aqui va la fecha, el logo de la upv y los botones de navegacion-->
-                    <td class="barra_arriba">
-                        <img class="logo" src="images/marca_UPV_principal_negro.png" alt="upv logo">
-                        <p class="fecha" id="date"></p>
-                        <script src="js/fecha.js"></script>
-                        <nav class="botonerav">
-                            <a id="anuncios"  class="boton_superior" onclick="change_content(this.id)">
-                                Anuncios
-                            </a>
-                            <a id="evaluacion"  class="boton_superior" onclick="change_content(this.id)">
-                                Evaluacion
-                            </a>
-                            <a id="correo"  class="boton_superior" onclick="change_content(this.id)">
-                                Correo
-                            </a>
-                            <a id="recursos"  class="boton_superior" onclick="change_content(this.id)">
-                                Recursos
-                            </a>
-                            <a id="chat"  class="boton_superior" onclick="change_content(this.id)">
-                                Chat
-                            </a>
-                            <a id="notas"  class="boton_superior" onclick="change_content(this.id)">
-                                Notas
-                            </a>
-                            <a id="grupos"  class="boton_superior" onclick="change_content(this.id)">
-                                Grupos
-                            </a>
-                        </nav>
-                    </td>
-                </tr>
-                <tr>
-                    <!--    esto es la botonera de la izquierda, hay que cambiarlo porque los botones dependen de las asignaturas del alumno,
-         esto era solo para mirar como hacerlo mas o menos    -->
-                    <td style="vertical-align: top">
-                        <div class="botonera" id="botonera">
+            <!-- celda de arriba a la derecha aqui va la fecha, el logo de la upv y los botones de navegacion-->
+            <td class="barra_arriba">
+                <img class="logo" src="images/marca_UPV_principal_negro.png" alt="upv logo">
+                <p class="fecha" id="date"></p>
+                <script src="js/fecha.js"></script>
+                <nav class="botonerav">
+                    <a id="anuncios"  class="boton_superior" onclick="change_content(this.id)">
+                        Anuncios
+                    </a>
+                    <a id="evaluacion"  class="boton_superior" onclick="change_content(this.id)">
+                        Evaluacion
+                    </a>
+                    <a id="correo"  class="boton_superior" onclick="change_content(this.id)">
+                        Correo
+                    </a>
+                    <a id="recursos"  class="boton_superior" onclick="change_content(this.id)">
+                        Recursos
+                    </a>
+                    <a id="chat"  class="boton_superior" onclick="change_content(this.id)">
+                        Chat
+                    </a>
+                    <a id="notas"  class="boton_superior" onclick="change_content(this.id)">
+                        Notas
+                    </a>
+                    <a id="grupos"  class="boton_superior" onclick="change_content(this.id)">
+                        Grupos
+                    </a>
+                </nav>
+            </td>
+        </tr>
+        <tr>
+            <!--    esto es la botonera de la izquierda, hay que cambiarlo porque los botones dependen de las asignaturas del alumno,
+ esto era solo para mirar como hacerlo mas o menos    -->
+            <td style="vertical-align: top">
+                <div class="botonera" id="botonera">
 
-                        </div>
-                    </td>
+                </div>
+            </td>
 
-                    <!--   Esto es el cuadrado gris que tiene el cuerpo principal de la pagina, si no me equivoco lo de dentro se tendra que hacer practicamente todo con ajax     -->
-                    <td class="celda_gris"><div id="content"></div></td>
-                </tr>
-            </thead>
-        </table>
-    </div>
+            <!--   Esto es el cuadrado gris que tiene el cuerpo principal de la pagina, si no me equivoco lo de dentro se tendra que hacer practicamente todo con ajax     -->
+            <td class="celda_gris"><div id="content"></div></td>
+        </tr>
+        </thead>
+    </table>
+</div>
 
-    <div class="movil">
-        <div class="dropdown">
-            <button class="dropbtn" onclick="toggleDropDown()">☰</button>
-            <div id="myDropdown" class="dropdown-content">
-                <a data-id="anuncios" onclick="change_content($(this).attr('data-id'))">
-                    Anuncios
-                </a>
-                <a data-id="evaluacion" onclick="change_content($(this).attr('data-id'))">
-                    Evaluacion
-                </a>
-                <a data-id="correo" onclick="change_content($(this).attr('data-id'))">
-                    Correo
-                </a>
-                <a data-id="recursos" onclick="change_content($(this).attr('data-id'))">
-                    Recursos
-                </a>
-                <a data-id="chat" onclick="change_content($(this).attr('data-id'))">
-                    Chat
-                </a>
-                <a data-id="notas" onclick="change_content($(this).attr('data-id'))">
-                    Notas
-                </a>
-                <a data-id="grupos" onclick="change_content($(this).attr('data-id'))">
-                    Grupos
-                </a>
-            </div>
+<div class="movil">
+    <div class="dropdown">
+        <button class="dropbtn" onclick="toggleDropDown()">☰</button>
+        <div id="myDropdown" class="dropdown-content">
+            <a data-id="anuncios" onclick="change_content($(this).attr('data-id'))">
+                Anuncios
+            </a>
+            <a data-id="evaluacion" onclick="change_content($(this).attr('data-id'))">
+                Evaluacion
+            </a>
+            <a data-id="correo" onclick="change_content($(this).attr('data-id'))">
+                Correo
+            </a>
+            <a data-id="recursos" onclick="change_content($(this).attr('data-id'))">
+                Recursos
+            </a>
+            <a data-id="chat" onclick="change_content($(this).attr('data-id'))">
+                Chat
+            </a>
+            <a data-id="notas" onclick="change_content($(this).attr('data-id'))">
+                Notas
+            </a>
+            <a data-id="grupos" onclick="change_content($(this).attr('data-id'))">
+                Grupos
+            </a>
         </div>
-        <div style="display: flex">
-            <button id="UserButtonInfo" style="margin-top: 10px">UserInfo</button>
-            <select id="subjects" style="margin-top: 10px"></select>
-        </div>
-        <div id="contentPhone"></div>
     </div>
+    <div style="display: flex">
+        <button id="UserButtonInfo" style="margin-top: 10px" onclick="modal_show()">UserInfo</button>
+        <select id="subjects" style="margin-top: 10px"></select>
+    </div>
+    <div id="contentPhone"></div>
+    <div id="UserModalInfo" class="modal" >
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" onclick="modal_hide()">&times;</span>
+            <p>Some text in the Modal..</p>
+        </div>
+
+    </div>
+</div>
 </body>
 </html>

@@ -172,3 +172,11 @@ function getAndSetUserInfo()
     })
 }
 
+function modal_show() {
+
+    document.getElementById("UserModalInfo").style.display= "block";
+
+}
+function modal_hide() {
+    document.getElementById("UserModalInfo").style.display= "none";
+}
