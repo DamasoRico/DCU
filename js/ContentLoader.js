@@ -69,8 +69,6 @@ function change_content(actual)
     // loads new content
     loadContent(actual+"Content.html")
 
-    getAjaxInfo(actual);
-
     // changes pc html, css part
     changePCContent(actual);
 
@@ -140,11 +138,7 @@ function changeURL(actual)
     window.onbeforeunload = function(){ return "Dude, are you sure you want to leave? Think of the kittens!"; };
 }
 
-function getAjaxInfo(actual)
-{
-}
-
-function loadSubjectsWAjax()
+function getAndSetUserInfo()
 {
     let userId = localStorage.getItem("UserId");
     $.ajax({
@@ -161,9 +155,10 @@ function loadSubjectsWAjax()
                 subjectsPhone += "<option value='"+ response.asignaturas[i].acronimo +"'>" + response.asignaturas[i].acronimo + "</option>"
             }
 
+            $("#name").html(response.nombre + ""  +  response.apellidos)
             $("#subjects").html(subjectsPhone);
             $("#botonera").html(subjects);
-        }       
+        }
     })
 }
 
